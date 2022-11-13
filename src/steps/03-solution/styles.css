@@ -1,0 +1,56 @@
+@config './tailwind.config.cjs';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary-50: #f0f3ff;
+    --primary-100: #e0e7ff;
+    --primary-200: #d0d7f7;
+    --primary-300: #aab9ff;
+    --primary-400: #8994ff;
+    --primary-500: #6b70fc;
+    --primary-600: #554fee;
+    --primary-700: #453ccd;
+    --primary-800: #3830a2;
+    --primary-900: #272173;
+  }
+  [data-theme='base'] {
+    --primary-50: #eef2ff;
+    --primary-100: #e0e7ff;
+    --primary-200: #d0d7f7;
+    --primary-300: #aab9ff;
+    --primary-400: #8994ff;
+    --primary-500: #6b70fc;
+    --primary-600: #554fee;
+    --primary-700: #453ccd;
+    --primary-800: #3830a2;
+    --primary-900: #272173;
+  }
+  [data-theme='rainforest'] {
+    --primary-50: #ecfdf4;
+    --primary-100: #c9f2de;
+    --primary-200: #9de9c6;
+    --primary-300: #56d0a0;
+    --primary-400: #00b380;
+    --primary-500: #009268;
+    --primary-600: #007955;
+    --primary-700: #006344;
+    --primary-800: #005038;
+    --primary-900: #003422;
+  }
+  [data-theme='candy'] {
+    --primary-50: #fdf2f8;
+    --primary-100: #f7e2ee;
+    --primary-200: #f8cce5;
+    --primary-300: #f5a4d0;
+    --primary-400: #f271b5;
+    --primary-500: #e13d90;
+    --primary-600: #c31667;
+    --primary-700: #a1004b;
+    --primary-800: #84003d;
+    --primary-900: #590028;
+  }
+}

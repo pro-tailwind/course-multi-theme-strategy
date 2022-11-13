@@ -1,0 +1,38 @@
+@config './tailwind.config.cjs';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  ------------------------------
+  Create CSS variables for the `primary` color shades.
+  These can be called `--primary-50` to `--primary-900`.
+
+  Start with just `primary-500`.
+
+  The theme values can be found in the Tailwind config file, but
+  here are the HEX values for the `500` color shade
+  for our three themes to get you started:
+
+  - Base:         #6b70fc
+  - Rainforest:   #009268
+  - Candy:        #e13d90
+  ------------------------------
+*/
+
+/*
+  ------------------------------
+  1. Define `:root` scope variables.
+  These should take the `base` color values.
+  ------------------------------
+*/
+
+/*
+  ------------------------------
+  3. Define "theme scope" variables for each theme.
+  
+  Look in the HTML markup to figure out what the 
+  scope selectors should be!
+  ------------------------------
+*/

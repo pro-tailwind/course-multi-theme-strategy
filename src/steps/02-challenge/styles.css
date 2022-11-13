@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* CSS var definition */
+    --color: #0099aa;
+  }
+}
+
+@layer components {
+  .square {
+    @apply h-16 w-16 rounded-lg;
+    /* CSS var consumption */
+    background-color: var(--color);
+  }
+
+  .square--pink {
+    /*  TODO: Redefine the CSS variable to use the `deeppink` value. */
+  }
+}
