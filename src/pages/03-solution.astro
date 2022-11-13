@@ -1,11 +1,11 @@
 ---
 import Layout from '~layouts/base.astro'
 import Snippet from '~steps/03-solution/index.astro'
-import '~steps/03-solution/styles.css'
+const stylesheet = '/src/steps/03-solution/styles.css'
 
 export const title = '03 - Solution'
 ---
 
-<Layout>
+<Layout stylesheet={stylesheet}>
   <Snippet />
 </Layout>

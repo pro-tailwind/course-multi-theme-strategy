@@ -1,0 +1,121 @@
+@config './tailwind.config.cjs';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+  Convert the HEX color values below 
+  to `R` `G` `B` channels.
+
+  Not `rgb()` colors, just the 
+  individual channels!
+*/
+
+@layer base {
+  :root {
+    --primary-50: #f0f3ff;
+    --primary-100: #e0e7ff;
+    --primary-200: #d0d7f7;
+    --primary-300: #aab9ff;
+    --primary-400: #8994ff;
+    --primary-500: #6b70fc;
+    --primary-600: #554fee;
+    --primary-700: #453ccd;
+    --primary-800: #3830a2;
+    --primary-900: #272173;
+  }
+  [data-theme='base'] {
+    --primary-50: #eef2ff;
+    --primary-100: #e0e7ff;
+    --primary-200: #d0d7f7;
+    --primary-300: #aab9ff;
+    --primary-400: #8994ff;
+    --primary-500: #6b70fc;
+    --primary-600: #554fee;
+    --primary-700: #453ccd;
+    --primary-800: #3830a2;
+    --primary-900: #272173;
+  }
+  [data-theme='rainforest'] {
+    --primary-50: #ecfdf4;
+    --primary-100: #c9f2de;
+    --primary-200: #9de9c6;
+    --primary-300: #56d0a0;
+    --primary-400: #00b380;
+    --primary-500: #009268;
+    --primary-600: #007955;
+    --primary-700: #006344;
+    --primary-800: #005038;
+    --primary-900: #003422;
+  }
+  [data-theme='candy'] {
+    --primary-50: #fdf2f8;
+    --primary-100: #f7e2ee;
+    --primary-200: #f8cce5;
+    --primary-300: #f5a4d0;
+    --primary-400: #f271b5;
+    --primary-500: #e13d90;
+    --primary-600: #c31667;
+    --primary-700: #a1004b;
+    --primary-800: #84003d;
+    --primary-900: #590028;
+  }
+}
+
+/* 
+  Cannot be bothered doing this manually?
+  Fair enough. You can replace the whole 
+  `@layer base` block with the code below 👇
+*/
+
+/* @layer base {
+  :root {
+    --primary-50: 238 242 255;
+    --primary-100: 224 231 255;
+    --primary-200: 208 215 247;
+    --primary-300: 170 185 255;
+    --primary-400: 137 148 255;
+    --primary-500: 107 112 252;
+    --primary-600: 85 79 238;
+    --primary-700: 69 60 205;
+    --primary-800: 56 48 162;
+    --primary-900: 39 33 115;
+  }
+  [data-theme="base"] {
+    --primary-50: 238 242 255;
+    --primary-100: 224 231 255;
+    --primary-200: 208 215 247;
+    --primary-300: 170 185 255;
+    --primary-400: 137 148 255;
+    --primary-500: 107 112 252;
+    --primary-600: 85 79 238;
+    --primary-700: 69 60 205;
+    --primary-800: 56 48 162;
+    --primary-900: 39 33 115;
+  }
+  [data-theme="rainforest"] {
+    --primary-50: 236 253 244;
+    --primary-100: 201 242 222;
+    --primary-200: 157 233 198;
+    --primary-300: 86 208 160;
+    --primary-400: 0 179 128;
+    --primary-500: 0 146 104;
+    --primary-600: 0 121 85;
+    --primary-700: 0 99 68;
+    --primary-800: 0 80 56;
+    --primary-900: 0 52 34;
+  }
+  [data-theme="candy"] {
+    --primary-50: 253 242 248;
+    --primary-100: 247 226 238;
+    --primary-200: 248 204 229;
+    --primary-300: 245 164 208;
+    --primary-400: 242 113 181;
+    --primary-500: 225 61 144;
+    --primary-600: 195 22 103;
+    --primary-700: 161 0 75;
+    --primary-800: 132 0 61;
+    --primary-900: 89 0 40;
+  }
+} */

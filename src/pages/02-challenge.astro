@@ -1,11 +1,11 @@
 ---
 import Layout from '~layouts/base.astro'
 import Snippet from '~steps/02-challenge/index.astro'
-import '~steps/02-challenge/styles.css'
+const stylesheet = '/src/steps/02-challenge/styles.css'
 
 export const title = '02 - Challenge'
 ---
 
-<Layout>
+<Layout stylesheet={stylesheet}>
   <Snippet />
 </Layout>
