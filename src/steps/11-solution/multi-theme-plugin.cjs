@@ -24,20 +24,6 @@ function getCssVariableDeclarations(input, path = [], output = {}) {
   return output
 }
 
-// Generate color extension object
-function getColorUtilitiesWithCssVariableReferences(input, path = []) {
-  return Object.fromEntries(
-    Object.entries(input).map(([key, value]) => {
-      const newPath = path.concat(key)
-      if (typeof value !== 'string') {
-        return [key, getColorUtilitiesWithCssVariableReferences(value, newPath)]
-      } else {
-        return [key, `rgb(var(--${newPath.join('-')}) / <alpha-value>)`]
-      }
-    })
-  )
-}
-
 // ------------------------------
 // Plugin definition
 // ------------------------------
@@ -55,7 +41,20 @@ module.exports = plugin(
   {
     theme: {
       extend: {
-        colors: getColorUtilitiesWithCssVariableReferences(Object.values(themes)[0]),
+        colors: {
+          primary: {
+            50: 'rgb(var(--primary-50) / <alpha-value>)',
+            100: 'rgb(var(--primary-100) / <alpha-value>)',
+            200: 'rgb(var(--primary-200) / <alpha-value>)',
+            300: 'rgb(var(--primary-300) / <alpha-value>)',
+            400: 'rgb(var(--primary-400) / <alpha-value>)',
+            500: 'rgb(var(--primary-500) / <alpha-value>)',
+            600: 'rgb(var(--primary-600) / <alpha-value>)',
+            700: 'rgb(var(--primary-700) / <alpha-value>)',
+            800: 'rgb(var(--primary-800) / <alpha-value>)',
+            900: 'rgb(var(--primary-900) / <alpha-value>)',
+          },
+        },
       },
     },
   }

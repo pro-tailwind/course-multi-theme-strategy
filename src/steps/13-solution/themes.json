@@ -6,6 +6,11 @@
       "200": "#d0d7f7",
       "300": "#aab9ff",
       "400": "#8994ff",
+      "this": {
+        "is": {
+          "awesome": "#0099aa"
+        }
+      },
       "500": "#6b70fc",
       "600": "#554fee",
       "700": "#453ccd",
@@ -15,7 +20,16 @@
     "secondary": {
       "some": {
         "nested": {
-          "color": "#0099aa"
+          "color": "#0099aa",
+          "wow": {
+            "it": {
+              "never": {
+                "stops": {
+                  "growing": "#030939"
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -36,7 +50,7 @@
     "secondary": {
       "some": {
         "nested": {
-          "color": "#2bbd74"
+          "color": "#aa0099"
         }
       }
     }
@@ -57,7 +71,7 @@
     "secondary": {
       "some": {
         "nested": {
-          "color": "#e31e94"
+          "color": "#9900aa"
         }
       }
     }

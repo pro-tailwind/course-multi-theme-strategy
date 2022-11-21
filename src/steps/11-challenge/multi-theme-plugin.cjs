@@ -12,38 +12,26 @@ function getRgbChannels(hex) {
   return `${red} ${green} ${blue}`
 }
 
-// Generate CSS variables
-function getCssVariableDeclarations(input, path = [], output = {}) {
-  Object.entries(input).forEach(([key, value]) => {
-    const newPath = path.concat(key)
-    if (typeof value !== 'string') {
-      getCssVariableDeclarations(value, newPath, output)
-    } else {
-      output[`--${newPath.join('-')}`] = getRgbChannels(value)
-    }
-  })
-  return output
-}
-
 /*
   ------------------------------
-  1. Write a helper function that takes an object
-  as input, and outputs the correct object 
-  to extend the Tailwind config's
-  theme colors.
+  1. Write a helper function that takes an input, 
+  and outputs the correct CSS-in-JS object 
+  to create the CSS variables.
+
+  Here's the format we're expecting:
+  
+  ```
+  {
+    '--primary-500': getRgbChannels('#6b70fc'),
+    ...,
+    '--secondary-some-nested-color': getRgbChannels('#0099aa'),
+  }
+  ```
   ------------------------------
 */
-
-function getColorUtilitiesWithCssVariableReferences(input, path = []) {
-  return Object.fromEntries(
-    Object.entries(input).map(([key, value]) => {
-      const newPath = path.concat(key)
-      if (typeof value !== 'string') {
-        return [key, getColorUtilitiesWithCssVariableReferences(value, newPath)]
-      }
-      return [key, `rgb(var(--${newPath.join('-')}) / <alpha-value>)`]
-    })
-  )
+function getCssVariableDeclarations(input, output = {}) {
+  // TODO
+  return output
 }
 
 // ------------------------------
@@ -52,25 +40,53 @@ function getColorUtilitiesWithCssVariableReferences(input, path = []) {
 module.exports = plugin(
   function ({ addBase }) {
     addBase({
-      ':root': getCssVariableDeclarations(Object.values(themes)[0]),
+      ':root': {
+        '--primary-50': getRgbChannels(themes.base['50']),
+        '--primary-100': getRgbChannels(themes.base['100']),
+        '--primary-200': getRgbChannels(themes.base['200']),
+        '--primary-300': getRgbChannels(themes.base['300']),
+        '--primary-400': getRgbChannels(themes.base['400']),
+        '--primary-500': getRgbChannels(themes.base['500']),
+        '--primary-600': getRgbChannels(themes.base['600']),
+        '--primary-700': getRgbChannels(themes.base['700']),
+        '--primary-800': getRgbChannels(themes.base['800']),
+        '--primary-900': getRgbChannels(themes.base['900']),
+      },
     })
     Object.entries(themes).forEach(([key, value]) => {
       addBase({
-        [`[data-theme="${key}"]`]: getCssVariableDeclarations(value),
+        [`[data-theme="${key}"]`]: {
+          '--primary-50': getRgbChannels(value['50']),
+          '--primary-100': getRgbChannels(value['100']),
+          '--primary-200': getRgbChannels(value['200']),
+          '--primary-300': getRgbChannels(value['300']),
+          '--primary-400': getRgbChannels(value['400']),
+          '--primary-500': getRgbChannels(value['500']),
+          '--primary-600': getRgbChannels(value['600']),
+          '--primary-700': getRgbChannels(value['700']),
+          '--primary-800': getRgbChannels(value['800']),
+          '--primary-900': getRgbChannels(value['900']),
+        },
       })
     })
   },
   {
     theme: {
       extend: {
-        /*
-          ------------------------------
-          2. Use the `getColorUtilitiesWithCssVariableReferences` 
-          helper to replace the hardcoded `primary`
-          object below.
-          ------------------------------
-        */
-        colors: getColorUtilitiesWithCssVariableReferences(Object.values(themes)[0]),
+        colors: {
+          primary: {
+            50: 'rgb(var(--primary-50) / <alpha-value>)',
+            100: 'rgb(var(--primary-100) / <alpha-value>)',
+            200: 'rgb(var(--primary-200) / <alpha-value>)',
+            300: 'rgb(var(--primary-300) / <alpha-value>)',
+            400: 'rgb(var(--primary-400) / <alpha-value>)',
+            500: 'rgb(var(--primary-500) / <alpha-value>)',
+            600: 'rgb(var(--primary-600) / <alpha-value>)',
+            700: 'rgb(var(--primary-700) / <alpha-value>)',
+            800: 'rgb(var(--primary-800) / <alpha-value>)',
+            900: 'rgb(var(--primary-900) / <alpha-value>)',
+          },
+        },
       },
     },
   }

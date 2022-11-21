@@ -54,6 +54,16 @@ const themes = {
   },
 }
 
+// ------------------------------
+// Plugin definition
+// ------------------------------
+
+/*
+  Use the `getRgbChannels` helper function
+  above to transform the HEX values 
+  from the `themes` object.
+*/
+
 module.exports = plugin(function ({ addBase }) {
   addBase({
     ':root': {

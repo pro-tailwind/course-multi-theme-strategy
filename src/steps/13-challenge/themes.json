@@ -20,16 +20,7 @@
     "secondary": {
       "some": {
         "nested": {
-          "color": "#0099aa",
-          "wow": {
-            "it": {
-              "never": {
-                "stops": {
-                  "growing": "#030939"
-                }
-              }
-            }
-          }
+          "color": "#0099aa"
         }
       }
     }

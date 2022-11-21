@@ -72,24 +72,22 @@ module.exports = plugin(
       },
     })
 
-    {
-      Object.entries(themes).forEach(([key, value]) => {
-        addBase({
-          [`[data-theme="${key}"]`]: {
-            '--primary-50': getRgbChannels(value['50']),
-            '--primary-100': getRgbChannels(value['100']),
-            '--primary-200': getRgbChannels(value['200']),
-            '--primary-300': getRgbChannels(value['300']),
-            '--primary-400': getRgbChannels(value['400']),
-            '--primary-500': getRgbChannels(value['500']),
-            '--primary-600': getRgbChannels(value['600']),
-            '--primary-700': getRgbChannels(value['700']),
-            '--primary-800': getRgbChannels(value['800']),
-            '--primary-900': getRgbChannels(value['900']),
-          },
-        })
+    Object.entries(themes).forEach(([key, value]) => {
+      addBase({
+        [`[data-theme="${key}"]`]: {
+          '--primary-50': getRgbChannels(value['50']),
+          '--primary-100': getRgbChannels(value['100']),
+          '--primary-200': getRgbChannels(value['200']),
+          '--primary-300': getRgbChannels(value['300']),
+          '--primary-400': getRgbChannels(value['400']),
+          '--primary-500': getRgbChannels(value['500']),
+          '--primary-600': getRgbChannels(value['600']),
+          '--primary-700': getRgbChannels(value['700']),
+          '--primary-800': getRgbChannels(value['800']),
+          '--primary-900': getRgbChannels(value['900']),
+        },
       })
-    }
+    })
   },
   {
     theme: {

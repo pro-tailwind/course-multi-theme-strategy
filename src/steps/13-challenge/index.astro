@@ -1,1 +1,17 @@
-<p>Helloooooo</p>
+---
+import tailwindConfig from './tailwind.config.cjs'
+import { getCustomColors } from '~/utils/getCustomColors.js'
+import ColorsTable from '~components/colors-table/index.astro'
+
+const customColors = getCustomColors(tailwindConfig)
+---
+
+<div class="m-8">
+  <h1 class="text-xl font-medium">Multi-theme colors</h1>
+  <p class="mt-4 max-w-md text-slate-700">
+    Here are the colors generated from our multi-theme plugin. These are pulled directly from the
+    Tailwind config in this page, and iterated over.
+  </p>
+
+  <ColorsTable colors={customColors} />
+</div>

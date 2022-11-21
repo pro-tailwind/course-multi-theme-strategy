@@ -1,6 +1,7 @@
 const multiThemePlugin = require('./multi-theme-plugin.cjs')
+const themes = require('./themes.json')
 
 module.exports = {
   content: ['./src/**/*.astro'],
-  plugins: [multiThemePlugin],
+  plugins: [multiThemePlugin({ colorThemes: themes })],
 }
