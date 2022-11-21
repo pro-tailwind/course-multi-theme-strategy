@@ -3,14 +3,15 @@
   an `rgb()` color function.
 
   You can use Tailwind's `<alpha-value>` placeholder
-  to compose the opacity into the color!  
+  to compose the opacity into the color:
+
+  ```
+  rgb(R G B / <alpha-value>)
+  ```
 */
 
 module.exports = {
-  content: {
-    relative: true,
-    files: ['./index.astro'],
-  },
+  content: ['./src/**/*.astro'],
   theme: {
     extend: {
       colors: {

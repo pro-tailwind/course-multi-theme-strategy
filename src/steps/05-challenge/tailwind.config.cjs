@@ -20,9 +20,6 @@
 */
 
 module.exports = {
-  content: {
-    relative: true,
-    files: ['./index.astro'],
-  },
+  content: ['./src/**/*.astro'],
   plugins: [],
 }

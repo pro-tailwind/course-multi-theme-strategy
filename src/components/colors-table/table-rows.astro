@@ -1,0 +1,45 @@
+---
+export interface Props {
+  colors: object
+  path?: string[]
+}
+
+const { colors, path = [] } = Astro.props
+---
+
+{
+  Object.entries(colors).map(([key, value]) => {
+    const newPath = path.concat(key)
+    if (typeof value !== 'string') {
+      return <Astro.self colors={value} path={newPath} />
+    }
+    return (
+      <tr>
+        <td>
+          <div
+            data-theme="base"
+            class="h-10 w-20 rounded-lg bg-red-100"
+            style={{ backgroundColor: `rgb(var(--${newPath.join('-')}))` }}
+          />
+        </td>
+        <td>
+          <div
+            data-theme="rainforest"
+            class="h-10 w-20 rounded-lg bg-red-100"
+            style={{ backgroundColor: `rgb(var(--${newPath.join('-')}))` }}
+          />
+        </td>
+        <td>
+          <div
+            data-theme="candy"
+            class="h-10 w-20 rounded-lg bg-red-100"
+            style={{ backgroundColor: `rgb(var(--${newPath.join('-')}))` }}
+          />
+        </td>
+        <td>
+          <p class="font-mono font-medium text-slate-900">{newPath.join('-')}</p>
+        </td>
+      </tr>
+    )
+  })
+}
