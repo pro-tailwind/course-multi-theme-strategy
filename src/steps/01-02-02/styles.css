@@ -19,7 +19,6 @@
   }
 
   .square--pink {
-    /*  TODO: Redefine the CSS variable to use the `deeppink` value. */
     --color: deeppink;
   }
 }
