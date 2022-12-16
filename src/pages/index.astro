@@ -8,13 +8,13 @@ const lessons = (await Astro.glob('./*.astro')) as AstroInstanceWithTitle[]
 
 <Layout>
   <div class="mx-auto mt-12 max-w-5xl px-4 sm:block">
-    <h1>Pro Tailwind: Multi-Theme Strategy</h1>
-    <ul class="mt-8">
+    <h1 class="text-2xl font-semibold">Multi-Theme Strategy With Tailwind CSS</h1>
+    <ul class="mt-8 space-y-2">
       {
-        lessons.map((step) => (
+        lessons.map((lesson) => (
           <li>
-            <a class="underline hover:text-indigo-600" href={step.url}>
-              {step.title}
+            <a class="hover:text-indigo-600 hover:underline" href={lesson.url}>
+              {lesson.url.slice(1)} - {lesson.title}
             </a>
           </li>
         ))
