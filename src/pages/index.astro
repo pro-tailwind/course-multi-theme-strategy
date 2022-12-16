@@ -3,7 +3,7 @@ import { AstroInstance } from 'astro'
 import Layout from '~layouts/base.astro'
 
 type AstroInstanceWithTitle = AstroInstance & { title: string }
-const steps = (await Astro.glob('./*.astro')) as AstroInstanceWithTitle[]
+const lessons = (await Astro.glob('./*.astro')) as AstroInstanceWithTitle[]
 ---
 
 <Layout>
@@ -11,7 +11,7 @@ const steps = (await Astro.glob('./*.astro')) as AstroInstanceWithTitle[]
     <h1>Pro Tailwind: Multi-Theme Strategy</h1>
     <ul class="mt-8">
       {
-        steps.map((step) => (
+        lessons.map((step) => (
           <li>
             <a class="underline hover:text-indigo-600" href={step.url}>
               {step.title}

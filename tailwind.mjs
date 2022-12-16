@@ -16,7 +16,9 @@ export default function tailwind() {
       if (id === resolvedVirtualModuleId) {
         const result = esbuild.buildSync({
           entryPoints: [
-            fileURLToPath(new URL('./src/steps/11-solution/tailwind.config.cjs', import.meta.url)),
+            fileURLToPath(
+              new URL('./src/lessons/11-solution/tailwind.config.cjs', import.meta.url)
+            ),
           ],
           outfile: 'out.js',
           write: false,

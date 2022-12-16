@@ -4,7 +4,7 @@
     "baseUrl": ".",
     "paths": {
       "~layouts/*": ["src/layouts/*"],
-      "~steps/*": ["src/steps/*"],
+      "~lessons/*": ["src/lessons/*"],
       "~components/*": ["src/components/*"],
       "~/*": ["src/*"]
     }
