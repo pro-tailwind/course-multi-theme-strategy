@@ -5,7 +5,6 @@ tasks:
     gp ports await 3000
     gp open src/lessons/${lesson}/index.astro
     gp preview $(gp url 3000)/${lesson}
-
 vscode:
   extensions:
     - astro-build.astro-vscode
