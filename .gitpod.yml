@@ -10,3 +10,8 @@ tasks:
       gp open src/lessons/${lesson}/index.astro
       gp preview $(gp url 3000)/${lesson}
     openMode: split-right
+
+vscode:
+  extensions:
+    - astro-build.astro-vscode
+    - bradlc.vscode-tailwindcss
