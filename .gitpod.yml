@@ -1,15 +1,10 @@
 tasks:
-  - name: Dev Server
-    init: npm install
-    command: npm run dev
-    openMode: split-left
-
-  - name: Lesson Context
-    command: |
-      gp ports await 3000
-      gp open src/lessons/${lesson}/index.astro
-      gp preview $(gp url 3000)/${lesson}
-    openMode: split-right
+  init: npm install
+  command: |
+    npm run dev
+    gp ports await 3000
+    gp open src/lessons/${lesson}/index.astro
+    gp preview $(gp url 3000)/${lesson}
 
 vscode:
   extensions:
