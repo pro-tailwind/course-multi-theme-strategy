@@ -1,6 +1,10 @@
 tasks:
-  - init: npm install
+  - name: Dev Server
+    init: npm install
+    command: npm run dev
+
+  - name: Lesson Context
     command: |
+      gp ports await 3000
       gp open src/lessons/${lesson}/index.astro
       gp preview $(gp url 3000)/${lesson}
-      npm run dev
