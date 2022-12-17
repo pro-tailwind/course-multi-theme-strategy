@@ -3,10 +3,14 @@ tasks:
     init: npm install
     command: npm run dev
 
-  - name: Lesson Context
+  - name: Open Preview
     command: |
       gp ports await 3000
       gp preview $(gp url 3000)/${lesson}
+
+  - name: Open Lesson File
+    command: |
+      gp ports await 3000
       gp open src/lessons/${lesson}/index.astro
     openMode: split-left
 
