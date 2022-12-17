@@ -1,0 +1,6 @@
+tasks:
+  - init: npm install
+    command: |
+      npm run dev
+      gp preview $(gp url 3000)${lesson}
+      gp open src/lessons/${lesson}/index.astro
