@@ -2,9 +2,8 @@ tasks:
   init: npm install
   command: |
     npm run dev
-    gp ports await 3000
-    gp open src/lessons/${lesson}/index.astro
-    gp preview $(gp url 3000)/${lesson}
+    gp ports await 3000 && gp open src/lessons/${lesson}/index.astro
+    gp ports await 3000 && gp preview $(gp url 3000)/${lesson}
 vscode:
   extensions:
     - astro-build.astro-vscode
