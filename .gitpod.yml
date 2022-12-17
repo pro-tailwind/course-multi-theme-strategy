@@ -1,9 +1,15 @@
 tasks:
-  - init: npm install
+  - name: Dev Server
+    init: npm install
+    command: npm run dev
+
+  - name: Lesson Context
     command: |
-      npm run dev
-      gp ports await 3000 && gp open src/lessons/${lesson}/index.astro
-      gp ports await 3000 && gp preview $(gp url 3000)/${lesson}
+      gp ports await 3000
+      gp open src/lessons/${lesson}/index.astro
+      gp preview $(gp url 3000)/${lesson}
+    openMode: split-right
+
 vscode:
   extensions:
     - astro-build.astro-vscode
