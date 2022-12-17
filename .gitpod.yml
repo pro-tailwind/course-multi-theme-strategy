@@ -6,9 +6,9 @@ tasks:
   - name: Lesson Context
     command: |
       gp ports await 3000
-      gp open src/lessons/${lesson}/index.astro
       gp preview $(gp url 3000)/${lesson}
-    openMode: split-right
+      gp open src/lessons/${lesson}/index.astro
+    openMode: split-left
 
 vscode:
   extensions:
