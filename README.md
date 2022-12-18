@@ -1,45 +1,44 @@
-# Astro Starter Kit: Minimal
+# Pro Tailwind - Multi-Theme Strategy Course
 
-```
-npm create astro@latest -- --template minimal
-```
+This repo contains all the challenges for the Multi-Theme Strategy course.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
+**You don't have to clone this repo** since all the challenges can be completed via [Gitpod](https://gitpod.io).
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+When opening a Gitpod link, the relevant **code file** and **UI preview** will be open side by side.
 
-## 🚀 Project Structure
+Some of the challenges are also available in [Tailwind Play](https://play.tailwindcss.com).
 
-Inside of your Astro project, you'll see the following folders and files:
+## Installation
 
-```
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+If you decide to clone the repo, here's what you need to do to get going:
+
+1. Clone the repo and install the local dependencies:
+
+```sh
+npm install
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+2. Start the dev server:
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+```sh
+npm run dev
+```
 
-Any static assets, like images, can be placed in the `public/` directory.
+You'll be able to open the project in your browser at `http://localhost:3000`.
 
-## 🧞 Commands
+## Course challenges
 
-All commands are run from the root of the project, from a terminal:
+This course is a **series of problem/solution sequences**.
 
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `npm install`          | Installs dependencies                            |
-| `npm run dev`          | Starts local dev server at `localhost:3000`      |
-| `npm run build`        | Build your production site to `./dist/`          |
-| `npm run preview`      | Preview your build locally, before deploying     |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro --help` | Get help using the Astro CLI                     |
+You work on a challenge, and then can compare your approach with the provided solution.
 
-## 👀 Want to learn more?
+Each lesson (challenge or solution) has a an `id`.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+For example, take the following lesson ID:
+
+`01-03-02`
+
+- The **UI preview** will be `localhost:3000/01-03-02`
+- The **code files** will be in `src/lessons/01-03-02`
+
+Saving any changes to code files will update the UI preview.
