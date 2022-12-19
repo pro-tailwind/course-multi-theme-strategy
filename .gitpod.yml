@@ -8,6 +8,7 @@ tasks:
       gp ports await 3000
       gp open src/lessons/${lesson}/index.astro
       gp preview $(gp url 3000)/${lesson}
+      exit
     openMode: split-right
 
 vscode:
