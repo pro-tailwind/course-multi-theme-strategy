@@ -1,9 +1,7 @@
 tasks:
   - name: Dev Server
     init: npm install
-    command: |
-      npm run dev
-      exit
+    command: npm run dev
 
   - name: Lesson Context
     command: |
