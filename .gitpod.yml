@@ -6,8 +6,8 @@ tasks:
   - name: Lesson Context
     command: |
       gp ports await 3000
-      gp open src/lessons/${lesson}/index.astro
-      gp preview $(gp url 3000)/${lesson}
+      gp open src/steps/${step}/index.astro
+      gp preview $(gp url 3000)/${step}
       exit
     openMode: split-right
 

@@ -32,13 +32,13 @@ This course is a **series of problem/solution sequences**.
 
 You work on a challenge, and then can compare your approach with the provided solution.
 
-Each lesson (challenge or solution) has a an `id`.
+Each step (challenge or solution) has a an `id`.
 
-For example, take the following lesson ID:
+For example, take the following step ID:
 
 `01-03-02`
 
 - The **UI preview** will be `localhost:3000/01-03-02`
-- The **code files** will be in `src/lessons/01-03-02`
+- The **code files** will be in `src/steps/01-03-02`
 
 Saving any changes to code files will update the UI preview.

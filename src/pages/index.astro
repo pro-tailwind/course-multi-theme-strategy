@@ -9,7 +9,7 @@ type AstroInstanceWithTitle = AstroInstance & {
   tag: 'Challenge' | 'Solution'
 }
 
-const lessons = (await Astro.glob('./*.astro')) as AstroInstanceWithTitle[]
+const steps = (await Astro.glob('./*.astro')) as AstroInstanceWithTitle[]
 
 function cx(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
@@ -22,25 +22,25 @@ function cx(...classes: string[]) {
       <h1 class="text-2xl font-semibold text-gray-900">Multi-Theme Strategy With Tailwind CSS</h1>
       <ul class="mt-12 grid gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-3">
         {
-          lessons.map((lesson) => (
+          steps.map((step) => (
             <li class="relative rounded-lg bg-white p-6 shadow transition duration-75 hover:-translate-y-[2px] hover:shadow-md">
               <div class="flex items-center gap-4">
-                <p class="font-semibold text-gray-400">{lesson.id}</p>
+                <p class="font-semibold text-gray-400">{step.id}</p>
                 <p
                   class={cx(
                     'rounded-lg px-2 py-1 text-xs font-medium uppercase tracking-widest',
-                    lesson.tag === 'Challenge'
+                    step.tag === 'Challenge'
                       ? 'bg-yellow-100 text-yellow-700'
                       : 'bg-green-100 text-green-700'
                   )}
                 >
-                  {lesson.tag}
+                  {step.tag}
                 </p>
               </div>
               <p class="mt-3 block text-gray-900 hover:text-indigo-600 hover:underline">
-                {lesson.title}
+                {step.title}
               </p>
-              <a href={lesson.url} aria-label="Start this lesson" class="absolute inset-0" />
+              <a href={step.url} aria-label="Start this step" class="absolute inset-0" />
             </li>
           ))
         }
