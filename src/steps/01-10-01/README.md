@@ -2,7 +2,9 @@
 
 It's time to try our multi-theme Tailwind CSS plugin in a "real-world" application.
 
-Here's the repo for the app:
+You can take this challenge [directly on GitPod](https://gitpod.io/#https://github.com/pro-tailwind/course-multi-theme-calendar-app/blob/main/tailwind.config.js).
+
+If you want to clone the actual repo, here's the link:
 
 https://github.com/pro-tailwind/course-multi-theme-calendar-app
 
