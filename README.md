@@ -6,8 +6,6 @@ This repo contains all the challenges for the Multi-Theme Strategy course.
 
 When opening a Gitpod link, the relevant **code file** and **UI preview** will be open side by side.
 
-Some of the challenges are also available in [Tailwind Play](https://play.tailwindcss.com).
-
 ## Installation
 
 If you decide to clone the repo, here's what you need to do to get going:
